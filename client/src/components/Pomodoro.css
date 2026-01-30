@@ -1,0 +1,127 @@
+:root {
+  --accent: rgba(34, 34, 34, 0.9); /* darker text for light mode */
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background video */
+.bgvideo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  text-align: center;
+  color: var(--accent);
+  backdrop-filter: blur(2px);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.timer .big {
+  font-size: 12vw;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.progress {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.15); /* lighter for light mode */
+  margin: 1rem 10%;
+}
+
+.progress .bar {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  width: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.controls button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  cursor: pointer;
+}
+
+.quote {
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.small {
+  margin-left: 0.6rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+/* ✅ Corrected dark mode */
+.app.dark .content {
+  color: #ffffff; /* white text */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.app.dark .controls button {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff; /* white text for buttons */
+}
+
+.app.dark .quote {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* MiniGame overlay */
+.minigame-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.minigame-box {
+  background: gray;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+}
