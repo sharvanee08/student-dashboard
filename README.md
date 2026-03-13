@@ -13,7 +13,7 @@ The application helps students manage academic activities such as attendance, ex
 - Timetable planner
 - Quiz module
 - Pomodoro focus timer
-- Dashboard with multiple student utilities
+- Dashboard which has multiple student utilities
 
 ---
 
